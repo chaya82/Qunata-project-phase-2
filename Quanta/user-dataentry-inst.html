@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Quanta</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/css/app.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Custom style CSS -->
+  
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"><i
+                  class="fas fa-bars"></i></a></li>
+            <li>
+            <!--<div class="search-group">
+              <span class="nav-link nav-link-lg" id="search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input type="text" class="search-control" placeholder="search" aria-label="search" aria-describedby="search">
+            </div>-->
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav navbar-right">
+        <li><a href="#" class="nav-link">
+                <i class="fa fa-user"></i> User
+              </a>
+            </li>
+          
+         <li><a href="#" class="nav-link">
+               Logout</a></li>  
+          
+          <li><a href="#"><img src="assets/img/quanta.png" /></a></li>
+          
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">
+              <img alt="image" src="assets/img/logo.png" class="header-logo" />
+              
+            </a>
+          </div>
+          <ul class="sidebar-menu mt-4">
+          <li><a class="nav-link" href="#"><i class="fas fa-layer-group"></i><span>Data Entry</span></a></li>
+         </ul>
+        </aside>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Data Entry (Instructions)</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">User</a></div>
+              
+              <div class="breadcrumb-item">Data Entry</div>
+            </div>
+          </div>
+          <div class="section-body">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                 <div class="card-body p-0">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col" width="30%">Data Field</th>
+                          <th scope="col" width="40%">Description/Instruction</th>
+                          <th scope="col" width="30%">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Emp ID</td>
+                          <td>Mandatory unique identifier for each employee (we don't need employee names)</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox1">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Date of Birth (dd-mm-yy)<br />Age (yrs)</td>
+                          <td>You need to enter either date of birth in dd-mm-yy format, or the current age of each employee</td>
+                          <td>I will uplod: <div class="form-check">
+	                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" checked="">
+	                        <label class="form-check-label" for="exampleRadios1">
+	                          DOB
+	                        </label>
+	                      </div>
+                          <div class="form-check">
+	                        <input class="form-check-input" type="radio" name="exampleRadios" id="Radio1" checked="">
+	                        <label class="form-check-label" for="exampleRadios1">
+	                          Age
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Date of joining (dd-mm-yy)</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox2">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Gender (Male/Female/Non Binary)</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox3">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Department</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox4">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Designation/Job Title</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox5">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Grade/Career Level</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox6">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it | Click <a href="#" data-toggle="modal" data-target="#newModal">here</a> to provide grade mapping
+	                        </label>
+	                      </div> </td>
+                        </tr>
+                        <tr>
+                          <td>Manager Emp ID</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox7">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Latest Performance Rating</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox8">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it | Click <a href="#" data-toggle="modal" data-target="#newModal">here</a> to provide grade mapping
+	                        </label>
+	                      </div> </td>
+                        </tr>
+                        <tr>
+                          <td>Year of Last Promotion (Year/NA)</td>
+                          <td>Text</td>
+                          <td><div class="form-check">
+	                        <input class="form-check-input" type="checkbox" id="Checkbox9">
+	                        <label class="form-check-label" for="defaultCheck1">
+	                          Got it
+	                        </label>
+	                      </div></td>
+                        </tr>
+                        <tr>
+                          <td>Total Fixed/Gross Pay</td>
+                          <td>Text</td>
+                          <td>Select Currency</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+           </div>
+           
+          </div>
+        </section>
+        
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2020
+        </div>
+        <div class="footer-right">
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="newModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">ok</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  </div>
+  <!-- General JS Scripts -->
+  <script src="assets/js/app.min.js"></script>
+  <!-- JS Libraies -->
+  <!-- Page Specific JS File -->
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  
+</body>
+
+
+
+</html>

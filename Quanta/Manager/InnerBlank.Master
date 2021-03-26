@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="InnerBlank.Master.cs" Inherits="Quanta.Manager.InnerBlank" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  
+   
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Quanta</title>
+     
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="/assets/css/app.min.css">
+   <link rel="stylesheet" href="/assets/bundles/jquery-selectric/selectric.css">
+  
+  <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <!-- Custom style CSS -->
+  
+  <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+  
+   <!-- General JS Scripts -->
+  <script src="/assets/js/app.min.js"></script>
+   <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+     <div class="loader"></div>
+      <div id="app">
+  
+    
+      
+         
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        
+    
+  </div>
+ </div>
+ <!-- JS Libraies -->
+
+  
+ 
+  <!-- Page Specific JS File -->
+
+   <script src="/assets/bundles/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Template JS File -->
+  <script src="/assets/js/scripts.js"></script>
+  
+                     
+    
+    </form>
+</body>
+</html>

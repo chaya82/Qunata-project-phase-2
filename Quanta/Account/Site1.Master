@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Quanta.Account.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Quanta</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="/assets/css/app.min.css">
+  <link rel="stylesheet" href="/assets/bundles/bootstrap-social/bootstrap-social.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <!-- Custom style CSS -->
+  
+  <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+<style>
+.dark{background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),url(/assets/img/auth-background-image.jpg);}.dark .card{border:0;background-color:#11151e;color:#96a2b4}
+.card {
+    background-color: #fff !important;
+    }
+.form-control, .input-group-text, .custom-select, .custom-file-label {
+    background-color: #fdfdff !important;}
+.dark .card .card-header {
+    border-bottom-color: #fff!important;
+}
+.dark .form-group>label {
+    color: #34395e;
+}
+.text-muted {
+    color: #6c757d !important;
+}
+.theme-coral a {
+    color: #0091EA;
+}
+.header-tab-menu {
+    margin-bottom: 20px;
+}
+.header-tab-menu .nav-tabs li {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-transform: uppercase;
+    -webkit-transition: all 300ms ease 0s;
+    transition: all 300ms ease 0s;
+}
+
+.header-tab-menu .nav-tabs li a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: #444;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 6px;
+    text-transform: capitalize;
+}
+.header-tab-menu .nav-tabs li a.active {
+    color: #0091EA;
+    border-bottom:solid 2px #0091EA;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.form-group{
+  position: relative;
+  }
+  .palceholder{
+   position: absolute;
+   top: 7px;
+   left: 8px;
+    color: #B1B1B1;
+    display: none;
+  }
+  label{
+   font-wight: normal;
+    color: #B1B1B1;
+    margin-left: 20px;
+  } 
+  .star{
+    color: red
+  }
+
+
+</style>
+    <!-- General JS Scripts -->
+  <script src="/assets/js/app.min.js"></script>
+ <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+     <div class="loader"></div>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+  <!-- JS Libraies -->
+  <!-- Page Specific JS File -->
+  <!-- Template JS File -->
+  <script src="/assets/js/scripts.js"></script>
+  <script>
+      /***********
+      Making placeholder star specifically red 
+      ****************/
+
+
+      $('.palceholder').click(function () {
+          $(this).siblings('input').focus();
+      });
+      $('.form-control').focus(function () {
+          $(this).siblings('.palceholder').hide();
+      });
+      $('.form-control').blur(function () {
+          var $this = $(this);
+          if ($this.val().length == 0)
+              $(this).siblings('.palceholder').show();
+      });
+      $('.form-control').blur();
+  </script>
+    </form>
+</body>
+</html>

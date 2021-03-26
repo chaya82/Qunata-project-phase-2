@@ -1,0 +1,9 @@
+
+Verify your email address to complete registration</br>
+Hi <%UserName%>,</br>
+Thanks for your interest in joining Quanta! To complete your registration, we need you to verify your email address.
+</br>
+<a href="<%VerificationUrl%>">Verify Email</a></br>
+</br></br>
+Thanks for your time,
+The Quanta Team
