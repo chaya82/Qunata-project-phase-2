@@ -105,7 +105,13 @@ input[type=number] {
                           </div>
                    </ItemTemplate>
                    </asp:Repeater>
-                  
+                     <div class="col-lg-6 col-md-12 col-sm-12">
+                  <asp:DropDownList ID="ddlIndustries" runat="server" onchange="showtxt()" CssClass="form-control"></asp:DropDownList>
+
+                  </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                      <asp:TextBox ID="txtother" runat="server" ClientIDMode="Static" name="other" style="display:none;" CssClass="form-control"></asp:TextBox>
+                      </div>
                           </div>
                   </div>
                   </div>
@@ -259,5 +265,13 @@ input[type=number] {
           $(document).ready(function () {
               $('#DataEntry').addClass('active');
           });
+          function showtxt() {
+              if ($("#ContentPlaceHolder1_ddlIndustries").val() == "-1") {
+                  document.getElementById('txtother').style.display = 'block'
+              }
+              else {
+                  document.getElementById('txtother').style.display = 'none'
+              }
+          }
 </script>
 </asp:Content>

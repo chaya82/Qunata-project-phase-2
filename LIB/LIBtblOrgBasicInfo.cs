@@ -62,6 +62,12 @@ public String dt
 get;
 set;
 }
+private String _Orglevel;
+public String Orglevel
+{
+    get;
+    set;
+}
 }
 
 

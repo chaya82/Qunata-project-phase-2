@@ -108,6 +108,62 @@
                 <li id="Report"><a class="nav-link" target="_blank" href="ReportPrint.aspx">Download PDF Report</a></li>
                </ul>
             </li>
+               <li id="LiRptLvl2" class="dropdown" runat="server" visible="false">
+              <a href="#" class="nav-link has-dropdown" id="A1"><i class="far fa-list-alt"></i><span>Level 2 Report</span></a>
+              <ul class="dropdown-menu" >
+                 <li id="Li2" class="dropdown">
+              <a href="#" class="nav-link has-dropdown" id="ulmanpower"><span>Manpower Productivity</span></a>
+              <ul class="dropdown-menu" id="ul1" style="display: none;">
+              <li id="rptRevenue"><a class="nav-link" href="RPT2RevenuePerEmp.aspx">Revenue/ Employee</a></li>
+                <li id="Li5"><a class="nav-link" href="#">HC Pyramid</a></li>
+                <li id="Li6"><a class="nav-link" href="RPT2SPOC.aspx">SPOC</a></li>
+                  <li id="Li7"><a class="nav-link" href="RPT2FunHeadCount.aspx">Functional Headcount</a></li>
+               </ul>
+            </li>
+            <li id="Li3" class="dropdown">
+              <a href="#" class="nav-link has-dropdown" id="A3"><span>Wage Bill Productivity</span></a>
+              <ul class="dropdown-menu" id="ul2" style="display: none;">
+               <li id="Li8"><a class="nav-link" href="RPT2TFPPerEmp.aspx">TFP/FTE</a></li>
+                <li id="Li9"><a class="nav-link" href="RPT2TFPPerRevenue.aspx">TFP/Revenue</a></li>
+                <li id="Li10"><a class="nav-link" href="RPT2TFPCompa.aspx">TFP Compa Ratio Analysis</a></li>
+                   <li id="Li13"><a class="nav-link" href="RPT2EquitybyGendert.aspx">TFP Internal Equity by Gender</a></li>
+                  <li id="Li11"><a class="nav-link" href="#">TFP Internal Equity by Tenure</a></li>
+                   <li id="Li12"><a class="nav-link" href="#">TFP/FTE</a></li>
+                 
+                     <li id="Li14"><a class="nav-link" href="#">TFP Distribution by Performance Rating</a></li>
+                      <li id="Li16"><a class="nav-link" href="#">Performance Rating based Compa</a></li>
+                      <li id="Li15"><a class="nav-link" href="#">Top 10% earners</a></li>
+                       <li id="Li17"><a class="nav-link" href="#">Gender-wise Perf distributionE</a></li>
+               </ul>
+            </li>
+               <%--<li id="Li8" class="dropdown" ><a class="nav-link has-dropdown" href="#"> <i class="far fa-list-alt"></i><span>Manpower Productivity</span></a>
+                 <ul class="dropdown-menu" >
+                  <li id="Li4"><a class="nav-link" href="#">Revenue/ Employee</a></li>
+                <li id="Li5"><a class="nav-link" href="#">HC Pyramid</a></li>
+                <li id="Li6"><a class="nav-link" href="#">SPOC</a></li>
+                  <li id="Li7"><a class="nav-link" href="#">Functional Headcount Distribution</a></li>
+                 </ul>
+               </li>
+               
+              
+                <li id="Li18" class="dropdown" ><a class="nav-link has-dropdown" href="#"> <i class="far fa-list-alt"></i><span>Wage Bill  Productivity</span></a>
+              
+                <ul class="dropdown-menu" >
+                  <li id="Li2"><a class="nav-link" href="#">TFP/FTE</a></li>
+                <li id="Li3"><a class="nav-link" href="#">TFP/Revenue</a></li>
+                <li id="Li10"><a class="nav-link" href="#">TFP Compa Ratio Analysis</a></li>
+                  <li id="Li11"><a class="nav-link" href="#">TFP Internal Equity by Tenure</a></li>
+                   <li id="Li12"><a class="nav-link" href="#">TFP/FTE</a></li>
+                    <li id="Li13"><a class="nav-link" href="#">TFP Internal Equity by Gender</a></li>
+                     <li id="Li14"><a class="nav-link" href="#">TFP Distribution by Performance Rating</a></li>
+                      <li id="Li16"><a class="nav-link" href="#">Performance Rating based Compa</a></li>
+                      <li id="Li15"><a class="nav-link" href="#">Top 10% earners</a></li>
+                       <li id="Li17"><a class="nav-link" href="#">Gender-wise Perf distributionE</a></li>
+                 </ul>
+                </li>--%>
+               
+               </ul>
+            </li>
                 <li id="Li1"><a class="nav-link" href="../Account/ChangePassword.aspx"><i class="fas fa-user"></i><span>Change Password</span></a></li>
          </ul>
         </aside>

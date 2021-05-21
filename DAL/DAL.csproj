@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DALCommon.cs" />
+    <Compile Include="DALtblmstBenchmark.cs" />
     <Compile Include="DALtblmstContact.cs" />
     <Compile Include="DALtblmstEmployee.cs" />
     <Compile Include="DALtblmstgrade.cs" />

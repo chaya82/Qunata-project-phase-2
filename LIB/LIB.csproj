@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="LIBtblmstBenchmark.cs" />
     <Compile Include="LIBtblmstContact.cs" />
     <Compile Include="LIBtblmstEmployee.cs" />
     <Compile Include="LIBtblmstgrade.cs" />

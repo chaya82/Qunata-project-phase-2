@@ -74,6 +74,12 @@ public String Currency
     get;
     set;
 }
+private String _Industry;
+public String Industry
+{
+    get;
+    set;
+}
 }
 
 

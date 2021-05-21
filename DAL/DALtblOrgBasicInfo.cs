@@ -254,6 +254,7 @@ objParamList.Add(new SqlParameter("@phone", objLIBtblOrgBasicInfo.phone));
 objParamList.Add(new SqlParameter("@designation", objLIBtblOrgBasicInfo.designation));
 objParamList.Add(new SqlParameter("@OrgName", objLIBtblOrgBasicInfo.OrgName));
 objParamList.Add(new SqlParameter("@industry", objLIBtblOrgBasicInfo.industry));
+objParamList.Add(new SqlParameter("@Orglevel", objLIBtblOrgBasicInfo.Orglevel));
 objParamList.Add(new SqlParameter("@dt", objLIBtblOrgBasicInfo.dt));
 objParamListOut.Add(new SqlParameter("@@id", SqlDbType.Int));
 strOutParamValues = clsESPSql.ExecuteSPNonQueryOutPut("SP_InserttblOrgBasicInfo", objParamList, objParamListOut, ref Result);
