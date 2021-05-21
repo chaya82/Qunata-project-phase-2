@@ -13,12 +13,30 @@ namespace Quanta.Manager {
     public partial class RPT2FunHeadCount {
         
         /// <summary>
-        /// grdList control.
+        /// grdListA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater grdList;
+        protected global::System.Web.UI.WebControls.Repeater grdListA;
+        
+        /// <summary>
+        /// grdListB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater grdListB;
+        
+        /// <summary>
+        /// grdListC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater grdListC;
     }
 }
