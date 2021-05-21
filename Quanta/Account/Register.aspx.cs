@@ -44,7 +44,7 @@ namespace Quanta.Account
                     ds = clsESPSql.ExecQuery("select * from tblOrgBasicInfo where username= '" + LoginUser.UserName + "'");
                     if (ds.Rows.Count > 0)
                     {
-
+                        Session["orglevel"] = ds.Rows[0]["orglevel"].ToString();
 
                         Session["orgid"] = ds.Rows[0]["id"].ToString();
                     }

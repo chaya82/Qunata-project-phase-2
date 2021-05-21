@@ -7,3 +7,12 @@ F:\Chhaya\Projects\ASP.NET\Webapp\Quanta\DAL\bin\Debug\LIB.pdb
 F:\Chhaya\Projects\ASP.NET\Webapp\Quanta\DAL\bin\Debug\MyCLS.pdb
 F:\Chhaya\Projects\ASP.NET\Webapp\Quanta\DAL\obj\Debug\DAL.dll
 F:\Chhaya\Projects\ASP.NET\Webapp\Quanta\DAL\obj\Debug\DAL.pdb
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\DAL.dll
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\DAL.pdb
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\LIB.dll
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\MyCLS.dll
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\LIB.pdb
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\bin\Debug\MyCLS.pdb
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\obj\Debug\DAL.dll
+F:\Chhaya\Projects\ASP.NET\GIT_Project\Qunata-project-phase-2\DAL\obj\Debug\DAL.pdb

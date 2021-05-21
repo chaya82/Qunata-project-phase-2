@@ -19,12 +19,21 @@ namespace Quanta.Manager
             {
                 if (!Page.IsPostBack)
                 {
+                    //DataTable ds = new DataTable();
+                    //ds = clsESPSql.ExecQuery("SP_GetNatureofBussines_Org " + Session["orgid"].ToString());
+                    
+                    
+                    //rptChlList.DataSource = ds;
+                    //rptChlList.DataBind();
                     DataTable ds = new DataTable();
-                    ds = clsESPSql.ExecQuery("SP_GetNatureofBussines_Org " + Session["orgid"].ToString());
-                    
-                    
-                    rptChlList.DataSource = ds;
-                    rptChlList.DataBind();
+                    ds = clsESPSql.ExecQuery("select * from tblmstNatureofBussiness " );
+                    ddlIndustries.DataSource = ds;
+                    ddlIndustries.DataTextField = "name";
+                    ddlIndustries.DataValueField = "id";
+                    ddlIndustries.DataBind();
+                    ddlIndustries.Items.Insert(ddlIndustries.Items.Count-1, new ListItem("Others", "-1"));
+                    ddlIndustries.Items.Insert(0, new ListItem("Select Industries", ""));
+
                     DataTable dtNew = new DataTable();
                     dtNew.Columns.Add("yr", typeof(string));
                     dtNew.Rows.Add(DateTime.Now.Year.ToString());
@@ -34,6 +43,7 @@ namespace Quanta.Manager
                     ddlfyear.DataValueField = "yr";
                     ddlfyear.DataBind();
                     ddlfyear.Items.Insert(0, new ListItem("Select First Year", ""));
+
                     bindyearvalue();
                     Session["remarks"] = null;
                     Session["correct"] = null;
@@ -147,6 +157,7 @@ namespace Quanta.Manager
                             lblcurrency1.Text = "USD";
                             lblcurrency2.Text = "USD";
                         }
+                        ddlIndustries.SelectedIndex = ddlIndustries.Items.IndexOf(ddlIndustries.Items.FindByText(dt.Rows[0]["industry"].ToString()));
                     }
 
                     else
@@ -170,23 +181,38 @@ namespace Quanta.Manager
                     lblerrormsg.Text = "Select First Year";
                     return;
                 }
-                bool ischkd = false;
-                for (int i = 0; i < rptChlList.Items.Count; i++)
+                if (ddlIndustries.SelectedIndex == 0)
                 {
-                    CheckBox chk = (CheckBox)rptChlList.Items[i].FindControl("chk1");
-                    HiddenField hdnid = (HiddenField)rptChlList.Items[i].FindControl("hdnid");
-                    if (chk.Checked)
-                    {
-                        ischkd = true;
-                        AddNatureofBussiness(Convert.ToInt32(hdnid.Value));
-                    }
-                }
-                if (!ischkd)
-                {
-                    lblerrormsg.Text = "Select Nature of bussiness";
+                    lblerrormsg.Text = "Select Industry";
                     return;
                 }
+                //bool ischkd = false;
+                //for (int i = 0; i < rptChlList.Items.Count; i++)
+                //{
+                //    CheckBox chk = (CheckBox)rptChlList.Items[i].FindControl("chk1");
+                //    HiddenField hdnid = (HiddenField)rptChlList.Items[i].FindControl("hdnid");
+                //    if (chk.Checked)
+                //    {
+                //        ischkd = true;
+                //        AddNatureofBussiness(Convert.ToInt32(hdnid.Value));
+                //    }
+                //}
+                //if (!ischkd)
+                //{
+                //    lblerrormsg.Text = "Select Nature of bussiness";
+                //    return;
+                //}
+                  string industry = "";
+                if (ddlIndustries.SelectedItem.Text.ToLower() == "others")
+                {
+                    industry = txtother.Text;
+                }
+                else
+                {
+                    industry = ddlIndustries.SelectedItem.Text;
+                }
                 int ret = 0;
+              
                 if (txtturn1.Text != "" && txtHeadCount1.Text != "" && txtProfit1.Text != "" && txtWage1.Text != "" && txtAttrition1.Text != "")
                 {
                     decimal turnover, headcount, profit, wagebill, attrtion;
@@ -195,7 +221,7 @@ namespace Quanta.Manager
                     profit = Convert.ToDecimal(txtProfit1.Text);
                     wagebill = Convert.ToDecimal(txtWage1.Text);
                     attrtion = Convert.ToDecimal(txtAttrition1.Text);
-                    ret = AddOrgInfo(ddlfyear.SelectedItem.Text, turnover, headcount, profit, wagebill, attrtion);
+                    ret = AddOrgInfo(ddlfyear.SelectedItem.Text, turnover, headcount, profit, wagebill, attrtion, industry);
                 }
                 if (txtturn2.Text != "" && txtHeadCount2.Text != "" && txtProfit2.Text != "" && txtWage2.Text != "" && txtAttrition2.Text != "")
                 {
@@ -205,7 +231,7 @@ namespace Quanta.Manager
                     profit = Convert.ToDecimal(txtProfit2.Text);
                     wagebill = Convert.ToDecimal(txtWage2.Text);
                     attrtion = Convert.ToDecimal(txtAttrition2.Text);
-                    ret = AddOrgInfo(lblyr1.Text, turnover, headcount, profit, wagebill, attrtion);
+                    ret = AddOrgInfo(lblyr1.Text, turnover, headcount, profit, wagebill, attrtion, industry);
                 }
                 if (txtturn3.Text != "" && txtHeadCount3.Text != "" && txtProfit3.Text != "" && txtWage3.Text != "" && txtAttrition3.Text != "")
                 {
@@ -215,7 +241,7 @@ namespace Quanta.Manager
                     profit = Convert.ToDecimal(txtProfit3.Text);
                     wagebill = Convert.ToDecimal(txtWage3.Text);
                     attrtion = Convert.ToDecimal(txtAttrition3.Text);
-                    ret = AddOrgInfo(lblyr2.Text, turnover, headcount, profit, wagebill, attrtion);
+                    ret = AddOrgInfo(lblyr2.Text, turnover, headcount, profit, wagebill, attrtion, industry);
                 }
                 if (ret > 0)
                 {
@@ -230,7 +256,7 @@ namespace Quanta.Manager
 
 
         }
-        protected int AddOrgInfo(string fyear,decimal turnover,decimal headcount,decimal profit,decimal wagebill,decimal attrtion)
+        protected int AddOrgInfo(string fyear,decimal turnover,decimal headcount,decimal profit,decimal wagebill,decimal attrtion,string industry)
         {
             int ret=0;
             try
@@ -251,6 +277,7 @@ namespace Quanta.Manager
                 objLIBtblmstOrgInfo.createdBy = User.Identity.Name;
                 objLIBtblmstOrgInfo.dt = DateTime.Now.ToShortDateString();
                 objLIBtblmstOrgInfo.Currency = ddlCurrency.SelectedItem.Text;
+                objLIBtblmstOrgInfo.Industry = industry;
                 tp.MessagePacket = objLIBtblmstOrgInfo;
                 tp = objDALtblmstOrgInfo.InserttblmstOrgInfo(tp);
                 Session["cur"] = ddlCurrency.SelectedItem.Text;

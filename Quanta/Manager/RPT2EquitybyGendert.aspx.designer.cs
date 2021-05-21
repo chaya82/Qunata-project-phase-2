@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Quanta.Admin {
+namespace Quanta.Manager {
     
     
-    public partial class OrgInfo1 {
+    public partial class RPT2EquitybyGendert {
         
         /// <summary>
-        /// chknetureList control.
+        /// grdList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList chknetureList;
+        protected global::System.Web.UI.WebControls.GridView grdList;
     }
 }

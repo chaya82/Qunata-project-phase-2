@@ -262,6 +262,7 @@ objParamList.Add(new SqlParameter("@Attrtion", objLIBtblmstOrgInfo.Attrtion));
 objParamList.Add(new SqlParameter("@createdBy", objLIBtblmstOrgInfo.createdBy));
 objParamList.Add(new SqlParameter("@dt", objLIBtblmstOrgInfo.dt));
 objParamList.Add(new SqlParameter("@Currency", objLIBtblmstOrgInfo.Currency));
+objParamList.Add(new SqlParameter("@industry", objLIBtblmstOrgInfo.Industry));
 objParamListOut.Add(new SqlParameter("@@id", SqlDbType.Int));
 strOutParamValues = clsESPSql.ExecuteSPNonQueryOutPut("SP_InserttblmstOrgInfo", objParamList, objParamListOut, ref Result);
 Packet.MessageId = Result;

@@ -31,8 +31,16 @@ namespace Quanta.Manager
                         if (dt.Rows.Count > 0)
                         {
                             RPT.Visible = true;
+                            if (Session["orglevel"] != null)
+                            {
+                                if (Session["orglevel"].ToString() == "2")
+                                {
+                                    LiRptLvl2.Visible = true;
+                                }
+                            }
                         }
                     }
+
                     //lbluser.Text = User.Identity.Name;
                 }
             }

@@ -405,7 +405,7 @@ This is a very helpful metric for determining manager utilization. A very low Sp
 					show : false
 				}
 	        },
-	        colors: ['#F68112','#1363A9','#D25057','#AF7763','#7E87C1','#C52027','#084E77','#FFCF6B','#E74D69','#10A8AB','#51C357','#02BB91','#F68E2E','#FBB150','#a39700','#006f35','#a66400','#257c17','#a54b00','#017071'],
+	       
 	        plotOptions: {
 	          bar: {
 	            horizontal: false,

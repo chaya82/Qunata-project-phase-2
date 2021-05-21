@@ -90,7 +90,9 @@
     <Content Include="Account\Verification.aspx" />
     <Content Include="Account\ForgotPassword.aspx" />
     <Content Include="Admin\Default.aspx" />
-    <Content Include="Admin\OrgInfo1.aspx" />
+    <Content Include="Admin\user.aspx" />
+    <Content Include="Admin\AddBenchmark.aspx" />
+    <Content Include="Manager\API\WebAPI.aspx" />
     <Content Include="assets\bundles\amcharts4\animated.js" />
     <Content Include="assets\bundles\amcharts4\charts.js" />
     <Content Include="assets\bundles\amcharts4\core.js" />
@@ -812,6 +814,13 @@
     <Content Include="blog\single_blog.html" />
     <Content Include="blog\single_blog_dark.html" />
     <Content Include="Account\Confirmation.aspx" />
+    <Content Include="Manager\RPT2EquitybyGendert.aspx" />
+    <Content Include="Manager\RPT2TFPCompa.aspx" />
+    <Content Include="Manager\RPT2TFPPerRevenue.aspx" />
+    <Content Include="Manager\RPT2TFPPerEmp.aspx" />
+    <Content Include="Manager\RPT2SPOC.aspx" />
+    <Content Include="Manager\RPT2FunHeadCount.aspx" />
+    <Content Include="Manager\RPT2RevenuePerEmp.aspx" />
     <Content Include="sendmailadmin.html" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\blank.html" />
@@ -1177,19 +1186,12 @@
     <Compile Include="Account\ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin\inner.Master.cs">
+      <DependentUpon>inner.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\OrgInfo1.aspx.cs">
-      <DependentUpon>OrgInfo1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\OrgInfo1.aspx.designer.cs">
-      <DependentUpon>OrgInfo1.aspx</DependentUpon>
+    <Compile Include="Admin\inner.Master.designer.cs">
+      <DependentUpon>inner.Master</DependentUpon>
     </Compile>
     <Compile Include="Account\Confirmation.aspx.cs">
       <DependentUpon>Confirmation.aspx</DependentUpon>
@@ -1197,6 +1199,34 @@
     </Compile>
     <Compile Include="Account\Confirmation.aspx.designer.cs">
       <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddBenchmark.aspx.cs">
+      <DependentUpon>AddBenchmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddBenchmark.aspx.designer.cs">
+      <DependentUpon>AddBenchmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\API\WebAPI.aspx.cs">
+      <DependentUpon>WebAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\API\WebAPI.aspx.designer.cs">
+      <DependentUpon>WebAPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataEntry\DataEntry1.aspx.cs">
       <DependentUpon>DataEntry1.aspx</DependentUpon>
@@ -1264,6 +1294,55 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2EquitybyGendert.aspx.cs">
+      <DependentUpon>RPT2EquitybyGendert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2EquitybyGendert.aspx.designer.cs">
+      <DependentUpon>RPT2EquitybyGendert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPCompa.aspx.cs">
+      <DependentUpon>RPT2TFPCompa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPCompa.aspx.designer.cs">
+      <DependentUpon>RPT2TFPCompa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPPerRevenue.aspx.cs">
+      <DependentUpon>RPT2TFPPerRevenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPPerRevenue.aspx.designer.cs">
+      <DependentUpon>RPT2TFPPerRevenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPPerEmp.aspx.cs">
+      <DependentUpon>RPT2TFPPerEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2TFPPerEmp.aspx.designer.cs">
+      <DependentUpon>RPT2TFPPerEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2SPOC.aspx.cs">
+      <DependentUpon>RPT2SPOC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2SPOC.aspx.designer.cs">
+      <DependentUpon>RPT2SPOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2FunHeadCount.aspx.cs">
+      <DependentUpon>RPT2FunHeadCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2FunHeadCount.aspx.designer.cs">
+      <DependentUpon>RPT2FunHeadCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\RPT2RevenuePerEmp.aspx.cs">
+      <DependentUpon>RPT2RevenuePerEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\RPT2RevenuePerEmp.aspx.designer.cs">
+      <DependentUpon>RPT2RevenuePerEmp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\InnerBlank.Master.cs">
       <DependentUpon>InnerBlank.Master</DependentUpon>
@@ -1492,6 +1571,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Site1.Master" />
+    <Content Include="Admin\inner.Master" />
     <None Include="assets\bundles\ionicons\fonts\ionicons28b5.eot" />
     <None Include="assets\bundles\ionicons\fonts\ionicons28b5.ttf" />
     <None Include="assets\bundles\ionicons\fonts\ionicons28b5.woff" />
@@ -1568,7 +1648,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56941</DevelopmentServerPort>
+          <DevelopmentServerPort>52906</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
