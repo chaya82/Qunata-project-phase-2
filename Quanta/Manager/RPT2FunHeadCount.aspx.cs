@@ -22,8 +22,20 @@ namespace Quanta.Manager
                     string qry = "SP_GetRptHeadCountDeptWiseLatestYear_level2 " + Session["orgid"].ToString() ;
                     MyCLS.clsExecuteStoredProcSql clsESPSql = new MyCLS.clsExecuteStoredProcSql();
                     DataTable dt = clsESPSql.ExecQuery(qry);
-                    grdList.DataSource = dt;
-                    grdList.DataBind();
+
+                    dt.DefaultView.RowFilter = "category='Category A'";
+                    grdListA.DataSource = dt;
+                    grdListA.DataBind();
+
+                    dt.DefaultView.RowFilter = "";
+                    dt.DefaultView.RowFilter = "category='Category B'";
+                    grdListB.DataSource = dt;
+                    grdListB.DataBind();
+
+                    dt.DefaultView.RowFilter = "";
+                    dt.DefaultView.RowFilter = "category='Category C'";
+                    grdListC.DataSource = dt;
+                    grdListC.DataBind();
                     //rptlistyr1.DataSource = dt;
                     //rptlistyr1.DataBind();
                 }

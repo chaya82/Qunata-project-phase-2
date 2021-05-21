@@ -20,7 +20,7 @@
           </div>
           <div class="section-body" id="content">
 <div class="row">
-              <div class="col-lg-7 col-md-7 col-sm-12 col-sm-12">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12">
                 <div class="card card-height-report">
                   <div class="card-header">
                     <h4>Revenue per employee</h4>
@@ -28,8 +28,55 @@
                   </div>
                   <div class="card-body">
                     <div class="recent-report__chart">
+                    <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12"><div lass="card ">
+                    <div class="card-header">
+                    <h4>Category A</h4>
+                    <br />
+                  </div>
+                  <div class="card-body">
+                    <asp:Repeater ID="grdListA"  runat="server">
+                   
+                     <ItemTemplate>
+                     <li><%#Eval("dept") %> - <%#Eval("prcent")%>%</li>
+                     </ItemTemplate>
+                     </asp:Repeater>
+                     </div>
+                    </div></div>
+                     <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12"><div lass="card ">
+                    <div class="card-header">
+                    <h4>Category B</h4>
+                    <br />
+                  </div>
+                  <div class="card-body">
+                    <asp:Repeater ID="grdListB"  runat="server">
+                   
+                     <ItemTemplate>
+                     <li><%#Eval("dept") %> - <%#Eval("prcent")%>%</li>
+                     </ItemTemplate>
+                     </asp:Repeater>
+                     </div>
+                    </div></div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12"><div lass="card ">
+                    <div class="card-header">
+                    <h4>Category C</h4>
+                    <br />
+                  </div>
+                  <div class="card-body">
+                    <asp:Repeater ID="grdListC"  runat="server">
+                   
+                     <ItemTemplate>
+                     <li><%#Eval("dept") %> - <%#Eval("prcent")%>%</li>
+                     </ItemTemplate>
+                     </asp:Repeater>
+                     </div>
+                    </div></div>
+                    </div>
+                    
+                    
+                    
                   <%--   <asp:GridView ID="grdList" runat="server"></asp:GridView>--%>
-                     <asp:Repeater ID="grdList"  runat="server">
+                     <%--<asp:Repeater ID="grdList"  runat="server">
                      <ItemTemplate>
                      <table class="table table-striped" style="width:100%">
                      <thead>
@@ -55,13 +102,18 @@
                      </table>
                  
                      </ItemTemplate>
-                     </asp:Repeater>
+                     </asp:Repeater>--%>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-5 col-md-5 col-sm-12 col-sm-12">
-                <div class="card card-height-report">
+              
+            </div>
+            
+         
+         <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12">
+                <div class="card ">
                   <div class="card-header">
                     <h4>Commentary </h4>
                   </div>
@@ -79,10 +131,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            
-         
-
+         </div>
 </div>
 </section>
 </div>
